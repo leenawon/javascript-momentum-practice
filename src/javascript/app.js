@@ -11,9 +11,10 @@ function handleLoginFormSubmit(event) {
 
   loginForm.classList.add(HIDDEN_CLASS);
   const userNameValue = loginInput.value;
-  
-  welcomeMessage.classList.remove(HIDDEN_CLASS);
+
+  localStorage.setItem("userNameValue",userNameValue);
   welcomeMessage.innerText = `안녕하세요! ${userNameValue}님`;
+  welcomeMessage.classList.remove(HIDDEN_CLASS);
 }
 
 loginForm.addEventListener('submit', handleLoginFormSubmit);
