@@ -2,11 +2,11 @@ const loginForm = document.querySelector('.loginForm');
 
 const loginInput = document.querySelector('.loginForm input');
 
-const welcomeMessage = document.querySelector('.welcome');
+const welcomeMessage = document.querySelector('h1.welcome');
 
 const HIDDEN_CLASS = 'hidden';
 
-const USER_NAME = 'userNameValue';
+const USER_NAME = 'userName';
 
 function handleLoginSubmit(event) {
   event.preventDefault();
@@ -16,8 +16,8 @@ function handleLoginSubmit(event) {
   showWelcomeMessage(userNameValue);
 }
 
-function showWelcomeMessage(userName) {
-  welcomeMessage.innerText = `안녕하세요! ${userName}님`;
+function showWelcomeMessage(name) {
+  welcomeMessage.innerText = `안녕하세요! ${name}님`;
   welcomeMessage.classList.remove(HIDDEN_CLASS);
 }
 
