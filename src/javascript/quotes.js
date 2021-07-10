@@ -40,3 +40,12 @@ const quotes = [
     author : "헬렌켈러"
   }
 ];
+
+const quote = document.querySelector('div.quotes span:first-child');
+
+const author = document.querySelector('div.quotes span:last-child');
+
+const randomQuotes = quotes[Math.floor(Math.random() * quotes.length)];
+
+quote.innerText = randomQuotes.quote;
+author.innerText = `- ${randomQuotes.author}`;
