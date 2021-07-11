@@ -6,6 +6,15 @@ function handleTodoFormSubmit(event) {
   event.preventDefault();
   const todoValue = todoInput.value;
   todoInput.value = "";
+  showTodo(todoValue);
+}
+
+function showTodo(todo) {
+  const listItem = document.createElement('li');
+  const span = document.createElement('span');
+  listItem.appendChild(span);
+  span.innerText = todo;
+  todoList.appendChild(listItem);
 }
 
 todoForm.addEventListener('submit', handleTodoFormSubmit);
