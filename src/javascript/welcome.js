@@ -8,6 +8,7 @@ const HIDDEN_CLASS = 'hidden';
 
 const USER_NAME = 'userName';
 
+// handle Login Submit Event
 function handleLoginSubmit(event) {
   event.preventDefault();
   loginForm.classList.add(HIDDEN_CLASS);
@@ -16,11 +17,13 @@ function handleLoginSubmit(event) {
   showWelcomeMessage(userNameValue);
 }
 
+// show Welcome Message
 function showWelcomeMessage(name) {
   welcomeMessage.innerText = `안녕하세요! ${name}님`;
   welcomeMessage.classList.remove(HIDDEN_CLASS);
 }
 
+// LocalStorage에서 불러온 User Name
 const getUserName = localStorage.getItem(USER_NAME);
 
 if(getUserName === null) {

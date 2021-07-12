@@ -1,3 +1,4 @@
+// Quotes
 const quotes = [
   {
     quote : "꿈을 계속 간직하고 있으면 반드시 실현할 때가 온다.",
@@ -45,6 +46,7 @@ const quote = document.querySelector('div.quotes span:first-child');
 
 const author = document.querySelector('div.quotes span:last-child');
 
+// Random Quotes
 const randomQuotes = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = randomQuotes.quote;
