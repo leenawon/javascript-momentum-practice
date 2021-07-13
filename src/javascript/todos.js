@@ -20,11 +20,11 @@ function handleDeleteButton(event) {
 // show Todo
 function showTodo(todo) {
   const listItem = document.createElement('li');
+  listItem.id = todo.id;
   const span = document.createElement('span');
-  span.innerText = todo;
+  span.innerText = todo.text;
   const deleteButton = document.createElement('button');
   deleteButton.innerText = '❌';
-
   deleteButton.addEventListener('click', handleDeleteButton);
   listItem.appendChild(span);
   listItem.appendChild(deleteButton);
@@ -36,8 +36,12 @@ function handleTodoFormSubmit(event) {
   event.preventDefault();
   const todoValue = todoInput.value;
   todoInput.value = "";
-  toDoArray.push(todoValue);
-  showTodo(todoValue);
+  const todoValueObject = {
+    id: Date.now(),
+    text: todoValue
+  };
+  toDoArray.push(todoValueObject);
+  showTodo(todoValueObject);
   saveTodo();
 }
 
