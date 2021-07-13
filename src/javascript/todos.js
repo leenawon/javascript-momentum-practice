@@ -15,6 +15,8 @@ function saveTodo() {
 function handleDeleteButton(event) {
   const deleteListItem = event.target.parentElement;
   deleteListItem.remove();
+  toDoArray = toDoArray.filter((todo) => todo.id !== parseInt(deleteListItem.id));
+  saveTodo();
 }
 
 // show Todo
