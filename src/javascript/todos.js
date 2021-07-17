@@ -26,7 +26,7 @@ function showTodo(todo) {
   const span = document.createElement('span');
   span.innerText = todo.text;
   const deleteButton = document.createElement('button');
-  deleteButton.innerText = '❌';
+  deleteButton.innerText = '지우기';
   deleteButton.addEventListener('click', handleDeleteButton);
   listItem.appendChild(span);
   listItem.appendChild(deleteButton);
