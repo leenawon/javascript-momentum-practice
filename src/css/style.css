@@ -117,3 +117,16 @@ img {
   opacity: 0.9;
   z-index: -1;
 }
+
+/* Media Query */
+
+@media screen and (max-width: 800px) {
+  /* Clock */
+  .clock {
+    padding: 7% 0 5%;
+  }
+  /* Quotes */
+  .quotes {
+    margin: 5%;
+  }
+}
